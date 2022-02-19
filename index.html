@@ -1,0 +1,64 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Card :: By Karan Kumar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="./scripts/script.js" defer></script>
+
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <section>
+                <ul id="pageIndicator">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+
+            </section>
+        </header>
+        <section id="title">
+            <h2 id="pageTitle">Upload Profile Photo</h2>
+        </section>
+        <main>
+            <form>
+                <section class="page" id="profilePage">
+                    <label id="profileUploadBtnLabel" for="profileUploadBtn"></label>
+                    <input type="file" name="profileUploadBtn" id="profileUploadBtn" required>
+                </section>
+                <section class="page" id="namePage">
+                    <input type="text" name="firstName" id="firstName" placeholder="First Name" required>
+                    <input type="text" name="lastName" id="lastName" placeholder="Last Name" required>
+                </section>
+                <section class="page" id="emailPage">
+                    <input type="email" name="emailInput" id="emailInput" placeholder="Email" required>
+                    <input type="number" name="emailInput" id="phoneInput" placeholder="Phone Number" required>
+
+                </section>
+                <section class="page" id="pswdPage">
+                    <input type="password" name="pswdInput" id="pswdInput" placeholder="Password" required>
+                    <button id="pswdAutoGenBtn">Auto Generate</button></section>
+                <section class="page" id="wlcmPage">
+                    <div class="welcomeHeading">
+                        <h2>Congratulations, Your Account is created Sucessfully</h2>
+                    </div>
+                </section>
+        </main>
+        <footer><button id="nextBtn" type="submit"></button></footer>
+        </form>
+
+    </div>
+    <span visiblity="hidden" id="pageCount">0</span>
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+:root {
+    --primaryColor: #5674D7;
+    --secondaryColor: #2744A2;
+    -webkit-tap-highlight-color: transparent;
+}
+
+* {
+    font-family: 'Raleway', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+body,
+main,
+#container,
+#profileUploadBtnLabel,
+#profilePage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+body {
+    box-sizing: border-box;
+}
+
+#container {
+    width: 360px;
+    height: 70vh;
+    flex-direction: column;
+    background: var(--primaryColor);
+    padding: 40px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 1fr 2fr 4fr 2fr;
+    place-items: center;
+
+}
+
+#namePage,
+#emailPage,
+#pswdPage,
+#wlcmPage {
+    display: none;
+}
+
+#pageIndicator {
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+}
+
+#pageIndicator li {
+    width: 15px;
+    height: 15px;
+    background-color: #ffff;
+    border-radius: 50%;
+    margin: 0px 15px;
+    list-style: none;
+    opacity: 0.6;
+}
+
+#pageIndicator li:nth-child(1) {
+    opacity: 1;
+}
+
+
+h2 {
+    color: white;
+}
+
+
+#profileUploadBtn {
+    display: none;
+}
+
+#profileUploadBtnLabel {
+    width: 100px;
+    height: 100px;
+    background-color: var(--secondaryColor);
+    background-image: url('./assets/camera.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+main {
+    overflow: hidden;
+}
+
+#profileUploadBtnLabel:hover,
+#nextBtn:hover,
+#pswdAutoGenBtn:hover {
+    transition: 0.2s;
+    background-color: #273F8D;
+}
+
+input {
+    outline: none;
+    border: none;
+    padding: 15px 10px;
+    width: 100%;
+    margin: 0 0 30px 0;
+    border-radius: 30px;
+    color: var(--secondaryColor);
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#pswdPage {
+    text-align: center;
+}
+
+#pswdAutoGenBtn {
+    background-color: var(--secondaryColor);
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 15px;
+    color: #ffff;
+
+}
+
+#nextBtn {
+    border: none;
+    background-color: var(--secondaryColor);
+    width: 35px;
+    height: 35px;
+    padding: 30px 30px 30px 30px;
+    border-radius: 50%;
+    background-image: url('./assets/right.svg');
+    background-size: 30%;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+#nextBtn:hover #profilePage{
+    transition: 4s;
+    height: 0;
+}
+
+#pageCount {
+    display: none;
+}
+
+.welcomeHeading {
+    text-align: center;
+    line-height: 1.5;
+}
+
+@media only screen and (max-width:600px) {
+    body {
+        margin: 0;
+    }
+
+    #container {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+    }
+}
